@@ -57,6 +57,7 @@ function (
     }
 
     function addEventListenerScroll(creativeContainer, id) {
+        console.log('** addEventListenerScroll **', creativeContainer, id);
         window.addEventListener('scroll', util.debounce(isCreativeInView.bind(null, creativeContainer, id), 100));
     }
 
@@ -102,6 +103,8 @@ function (
     }
 
     function isCreativeInView(creativeContainer, id) {
+        console.log('** isCreativeInView **', creativeContainer, id);
+        
         var messageName = 'creative_impression/' + id;
 
         if (trackedImpressions.indexOf(id) === -1 && util.isElementPartiallyInViewport(creativeContainer)) {

@@ -50,6 +50,8 @@ define(function() {
         iframe.style.display = 'none';
         iframe.src = url;
 
+        console.log('** signalDevice **', url);
+
         document.documentElement.appendChild(iframe);
         document.documentElement.removeChild(iframe);
     }
