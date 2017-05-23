@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
     require('load-grunt-tasks')(grunt);
-    
+
     config = {};
 
     try {
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
                 dev: {
                     options: {
                         baseUrl: 'ArticleTemplates/assets/js',
-                        mainConfigFile: 'ArticleTemplates/assets/js/main.js',
+                        mainConfigFile: 'js/main.js',
                         dir: 'ArticleTemplates/assets/build',
                         optimize: 'uglify2',
                         generateSourceMaps: false,
@@ -74,22 +74,22 @@ module.exports = function(grunt) {
         // stylesheets
         sasslint: {
             options: {
-                configFile: 'ArticleTemplates/assets/scss/sass-lint.yml'
+                configFile: 'scss/sass-lint.yml'
             },
             target: [
-                'ArticleTemplates/assets/scss/**/!(vendor)/*.scss'
+                'scss/**/!(vendor)/*.scss'
             ]
         },
         sass: {
             dist: {
                 files: {
-                    'ArticleTemplates/assets/css/fonts-android.css':  'ArticleTemplates/assets/scss/fonts-android.scss',
-                    'ArticleTemplates/assets/css/fonts-ios.css':  'ArticleTemplates/assets/scss/fonts-ios.scss',
-                    'ArticleTemplates/assets/css/fonts-windows.css':  'ArticleTemplates/assets/scss/fonts-windows.scss',
-                    'ArticleTemplates/assets/css/interactive.css':  'ArticleTemplates/assets/scss/interactive.scss',
-                    'ArticleTemplates/assets/css/outbrain.css':  'ArticleTemplates/assets/scss/outbrain.scss',
-                    'ArticleTemplates/assets/css/style-async.css':  'ArticleTemplates/assets/scss/style-async.scss',
-                    'ArticleTemplates/assets/css/style-sync.css':  'ArticleTemplates/assets/scss/style-sync.scss',
+                    'ArticleTemplates/assets/css/fonts-android.css':  'scss/fonts-android.scss',
+                    'ArticleTemplates/assets/css/fonts-ios.css':  'scss/fonts-ios.scss',
+                    'ArticleTemplates/assets/css/fonts-windows.css':  'scss/fonts-windows.scss',
+                    'ArticleTemplates/assets/css/interactive.css':  'scss/interactive.scss',
+                    'ArticleTemplates/assets/css/outbrain.css':  'scss/outbrain.scss',
+                    'ArticleTemplates/assets/css/style-async.css':  'scss/style-async.scss',
+                    'ArticleTemplates/assets/css/style-sync.css':  'scss/style-sync.scss',
                 }
             }
         },
@@ -111,8 +111,8 @@ module.exports = function(grunt) {
                 force: true
             },
             uses_defaults: [
-                'Gruntfile.js', 
-                'ArticleTemplates/assets/js/{bootstraps, modules}/*.js'
+                'Gruntfile.js',
+                'js/{bootstraps, modules}/*.js'
             ],
             with_overrides: {
                 options: {
@@ -153,9 +153,9 @@ module.exports = function(grunt) {
                 },
                 files: {
                     src: [
-                        'ArticleTemplates/assets/js/*.js',
-                        'ArticleTemplates/assets/js/bootstraps/*.js',
-                        'ArticleTemplates/assets/js/modules/*.js',
+                        'js/*.js',
+                        'js/bootstraps/*.js',
+                        'js/modules/*.js',
                         'test/spec/unit/**/*.js'
                     ]
                 }
@@ -168,7 +168,7 @@ module.exports = function(grunt) {
                     basePath: './',
                     frameworks: ['mocha', 'requirejs', 'chai-sinon'],
                     files: [
-                        {pattern: 'ArticleTemplates/assets/js/**/*.js' , included: false},
+                        {pattern: 'js/**/*.js' , included: false},
                         {pattern: 'test/spec/unit/**/*.js', included: false},
                         {pattern: 'node_modules/d3/d3.js', included: false},
                         {pattern: 'node_modules/domready/ready.js', included: false},
@@ -179,13 +179,13 @@ module.exports = function(grunt) {
                         'test/spec/unit/test-main.js'
                     ],
                     exclude: [
-                        'ArticleTemplates/assets/js/main.js'
+                        'js/main.js'
                     ],
                     reporters: ['mocha', 'coverage'],
                     preprocessors: {
-                        'ArticleTemplates/assets/js/*.js': ['coverage'],
-                        'ArticleTemplates/assets/js/bootstraps/*.js': ['coverage'],
-                        'ArticleTemplates/assets/js/modules/*.js': ['coverage']
+                        'js/*.js': ['coverage'],
+                        'js/bootstraps/*.js': ['coverage'],
+                        'js/modules/*.js': ['coverage']
                     },
                     coverageReporter: {
                         reporters: [{
@@ -209,11 +209,11 @@ module.exports = function(grunt) {
         // watch
         watch: {
             js: {
-                files: ['ArticleTemplates/assets/js/**/*.js'],
+                files: ['js/**/*.js'],
                 tasks: ['buildJS','rsync']
             },
             scss: {
-                files: ['ArticleTemplates/assets/scss/**/*.scss'],
+                files: ['scss/**/*.scss'],
                 tasks: ['buildCSS','rsync']
             },
             copy: {
@@ -221,7 +221,7 @@ module.exports = function(grunt) {
                 tasks: ['rsync']
             }
         },
-        // desktop notifications for Grunt errors 
+        // desktop notifications for Grunt errors
         notify_hooks: {
             options: {
                 enabled: true,
