@@ -5,7 +5,7 @@ define([
 ) {
     'use strict';
 
-    describe('ArticleTemplates/assets/js/bootstraps/football', function () {
+    describe('js/bootstraps/football', function () {
         var football,
             container,
             sandbox;
@@ -29,7 +29,7 @@ define([
             
             injector
                 .mock('modules/youtube', youtubeMock)
-                .require(['ArticleTemplates/assets/js/bootstraps/football'], function (sut) {
+                .require(['js/bootstraps/football'], function (sut) {
                     football = sut;
 
                     done();

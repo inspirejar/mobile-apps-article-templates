@@ -5,7 +5,7 @@ define([
 ) {
     'use strict';
 
-    describe('ArticleTemplates/assets/js/bootstraps/audio', function () {
+    describe('js/bootstraps/audio', function () {
         var audio,
             sandbox,
             container,
@@ -59,7 +59,7 @@ define([
             injector
                 .mock('mobileSlider', mobileSliderMock)
                 .mock('modules/util', utilMock)
-                .require(['ArticleTemplates/assets/js/bootstraps/audio'], function (sut) {
+                .require(['js/bootstraps/audio'], function (sut) {
                     audio = sut;
 
                     done();

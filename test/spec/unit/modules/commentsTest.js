@@ -5,7 +5,7 @@ define([
 ) {
     'use strict';
 
-    describe('ArticleTemplates/assets/js/modules/comments', function () {
+    describe('js/modules/comments', function () {
         var comments,
             sandbox,
             container;
@@ -34,7 +34,7 @@ define([
             injector
                 .mock('modules/relativeDates', relativeDatesMock)
                 .mock('modules/util', utilMock)
-                .require(['ArticleTemplates/assets/js/modules/comments'], function (sut) {
+                .require(['js/modules/comments'], function (sut) {
                     comments = sut;
 
                     done();

@@ -25,7 +25,7 @@ module.exports = function(grunt) {
             grunt.config(['requirejs'], {
                 dev: {
                     options: {
-                        baseUrl: 'ArticleTemplates/assets/js',
+                        baseUrl: 'js/',
                         mainConfigFile: 'js/main.js',
                         dir: 'ArticleTemplates/assets/build',
                         optimize: 'uglify2',

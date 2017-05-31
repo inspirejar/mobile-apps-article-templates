@@ -42,7 +42,7 @@ define([
         return figElem;
     }
 
-    describe('ArticleTemplates/assets/js/bootstraps/common', function () {
+    describe('js/bootstraps/common', function () {
         var common,
             sandbox;
             
@@ -104,7 +104,7 @@ define([
                 .mock('modules/more-tags', moreTagsMock)
                 .mock('modules/sharing', sharingMock)
                 .mock('modules/util', utilMock)
-                .require(['ArticleTemplates/assets/js/bootstraps/common'], function (sut) {
+                .require(['js/bootstraps/common'], function (sut) {
                     common = sut;
                     done();
                 });

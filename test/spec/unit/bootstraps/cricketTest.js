@@ -5,7 +5,7 @@ define([
 ) {
     'use strict';
 
-    describe('ArticleTemplates/assets/js/bootstraps/cricket', function () {
+    describe('js/bootstraps/cricket', function () {
         var cricket,
             container;
             
@@ -17,7 +17,7 @@ define([
             document.body.appendChild(container);
 
             injector
-                .require(['ArticleTemplates/assets/js/bootstraps/cricket'], function (sut) {
+                .require(['js/bootstraps/cricket'], function (sut) {
                     cricket = sut;
                     
                     done();

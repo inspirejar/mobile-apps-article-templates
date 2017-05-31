@@ -5,7 +5,7 @@ define([
 ) {
     'use strict';
 
-    describe('ArticleTemplates/assets/js/bootstraps/liveblog', function () {
+    describe('js/bootstraps/liveblog', function () {
         var liveblog,
             container,
             sandbox,
@@ -72,7 +72,7 @@ define([
                 .mock('modules/minute', minuteMock)
                 .mock('modules/creativeInjector', creativeInjectorMock)
                 .mock('modules/util', utilMock)
-                .require(['ArticleTemplates/assets/js/bootstraps/liveblog'], function (sut) {
+                .require(['js/bootstraps/liveblog'], function (sut) {
                     liveblog = sut;
 
                     done();

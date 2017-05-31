@@ -5,10 +5,10 @@ define([
 ) {
     'use strict';
 
-    describe('ArticleTemplates/assets/js/bootstraps/article', function () {
+    describe('js/bootstraps/article', function () {
         var article,
             sandbox;
-            
+
         var youtubeMock,
             twitterMock,
             witnessMock,
@@ -19,7 +19,7 @@ define([
 
         beforeEach(function (done) {
             var injector = new Squire();
-            
+
             sandbox = sinon.sandbox.create();
 
             twitterMock = {
@@ -43,7 +43,7 @@ define([
             immersiveMock = {
                 init: sandbox.spy()
             };
-            
+
             window.GU = {
                 opts: {
                     isImmersive: false
@@ -60,7 +60,7 @@ define([
                 .mock('modules/creativeInjector', creativeInjectorMock)
                 .mock('modules/youtube', youtubeMock)
                 .mock('modules/immersive', immersiveMock)
-                .require(['ArticleTemplates/assets/js/bootstraps/article'], function (sut) {
+                .require(['js/bootstraps/article'], function (sut) {
                     article = sut;
 
                     done();

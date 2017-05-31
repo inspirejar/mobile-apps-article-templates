@@ -5,7 +5,7 @@ define([
 ) {
     'use strict';
 
-    describe('ArticleTemplates/assets/js/modules/cards', function () {
+    describe('js/modules/cards', function () {
         var cards,
             container,
             sandbox;
@@ -47,7 +47,7 @@ define([
             injector
                 .mock('flipSnap', flipSnapMock)
                 .mock('modules/util', utilMock)
-                .require(['ArticleTemplates/assets/js/modules/cards'], function (sut) {
+                .require(['js/modules/cards'], function (sut) {
                     cards = sut;
 
                     done();

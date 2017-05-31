@@ -5,7 +5,7 @@ define([
 ) {
     'use strict';
 
-    describe('ArticleTemplates/assets/js/modules/outbrain', function () {
+    describe('js/modules/outbrain', function () {
         var outbrain,
             sandbox,
             container;
@@ -27,7 +27,7 @@ define([
             };
 
             injector
-                .require(['ArticleTemplates/assets/js/modules/outbrain'], function (sut) {
+                .require(['js/modules/outbrain'], function (sut) {
                     outbrain = sut;
 
                     done();

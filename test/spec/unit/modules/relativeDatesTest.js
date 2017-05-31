@@ -5,7 +5,7 @@ define([
 ) {
     'use strict';
 
-    describe('ArticleTemplates/assets/js/modules/relativeDates', function () {
+    describe('js/modules/relativeDates', function () {
         var relativeDates,
             clock,
             now = new Date('2016-06-28T22:00:00Z');
@@ -14,7 +14,7 @@ define([
             var injector = new Squire();
 
             injector
-                .require(['ArticleTemplates/assets/js/modules/relativeDates'], function (sut) {
+                .require(['js/modules/relativeDates'], function (sut) {
                     relativeDates = sut;
 
                     done();

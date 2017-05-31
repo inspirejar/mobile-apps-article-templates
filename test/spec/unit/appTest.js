@@ -5,7 +5,7 @@ define([
 ) {
     'use strict';
 
-    describe('ArticleTemplates/assets/js/app', function () {
+    describe('js/app', function () {
         var app,
             sandbox;
 
@@ -32,7 +32,7 @@ define([
                 .mock('domReady', domReadyMock)
                 .mock('modules/ads', adsMock)
                 .mock('modules/util', utilMock)
-                .require(['ArticleTemplates/assets/js/app'], function (sut) {
+                .require(['js/app'], function (sut) {
                     app = sut;
 
                     done();

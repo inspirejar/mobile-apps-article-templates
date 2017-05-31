@@ -5,7 +5,7 @@ define([
 ) {
     'use strict';
 
-    describe('ArticleTemplates/assets/js/modules/youtube', function () {
+    describe('js/modules/youtube', function () {
         this.timeout(15000);
 
         var youtube,
@@ -141,7 +141,7 @@ define([
 
             injector
                 .mock('modules/util', utilMock)
-                .require(['ArticleTemplates/assets/js/modules/youtube'], function (sut) {
+                .require(['js/modules/youtube'], function (sut) {
                     youtube = sut;
 
                     done();

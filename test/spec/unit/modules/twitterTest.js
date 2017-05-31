@@ -5,7 +5,7 @@ define([
 ) {
     'use strict';
 
-    describe('ArticleTemplates/assets/js/modules/twitter', function () {
+    describe('js/modules/twitter', function () {
         var twitter,
             sandbox,
             container;
@@ -33,7 +33,7 @@ define([
 
             injector
                 .mock('modules/util', utilMock)
-                .require(['ArticleTemplates/assets/js/modules/twitter'], function (sut) {
+                .require(['js/modules/twitter'], function (sut) {
                     twitter = sut;
 
                     done();

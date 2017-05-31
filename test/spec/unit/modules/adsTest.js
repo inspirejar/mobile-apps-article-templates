@@ -5,7 +5,7 @@ define([
 ) {
     'use strict';
 
-    describe('ArticleTemplates/assets/js/modules/ads', function () {
+    describe('js/modules/ads', function () {
         var ads,
             sandbox,
             container;
@@ -43,7 +43,7 @@ define([
 
             injector
                 .mock('modules/util', utilMock)
-                .require(['ArticleTemplates/assets/js/modules/ads'], function (sut) {
+                .require(['js/modules/ads'], function (sut) {
                     ads = sut;
 
                     done();

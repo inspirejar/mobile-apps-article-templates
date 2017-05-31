@@ -5,7 +5,7 @@ define([
 ) {
     'use strict';
 
-    describe('ArticleTemplates/assets/js/modules/more-tags', function () {
+    describe('js/modules/more-tags', function () {
         var moreTags,
             container,
             getTagsHTML = function (count) {
@@ -29,7 +29,7 @@ define([
             document.body.appendChild(container);
 
             injector
-                .require(['ArticleTemplates/assets/js/modules/more-tags'], function (sut) {
+                .require(['js/modules/more-tags'], function (sut) {
                     moreTags = sut;
                     done();
                 });
