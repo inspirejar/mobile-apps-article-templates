@@ -18,6 +18,8 @@ define([
     }
 
     function checkForTweets() {
+        return; // TEMPORARILY DISABLE TWEET ENHANCEMENTS
+
         tweets = document.body.querySelectorAll('blockquote.js-tweet, blockquote.twitter-tweet');
 
         if (tweets.length && !scriptReady) {
