@@ -139,6 +139,7 @@ Display an embedded element. Element embeds are typically shown as figures, and 
     }
 
     .element__inner {
+        
         .youtube-media__placeholder {
             z-index: 1;
             position: absolute;
@@ -204,6 +205,23 @@ Display an embedded element. Element embeds are typically shown as figures, and 
 
     .element-image + .youtube-media {
         display: none;
+    }
+}
+
+//  Disable youtube enhancement
+body[data-disable-enhanced-youtube="true"] {
+    .youtube-media__placeholder {
+        display: none;
+    }
+
+    .element-youtube {
+        .element__inner {
+            .youtube-media {
+                opacity: 1;
+                transition: none;
+                -webkit-transition: none;
+            }
+        }
     }
 }
 

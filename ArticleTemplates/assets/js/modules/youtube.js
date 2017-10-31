@@ -87,7 +87,7 @@ define([
         }).filter(Boolean).concat(sdkPlaceholders);
 
         if (videos.length) {
-            if (!scriptReady) {
+            if (!scriptReady && !GU.opts.disableEnhancedYoutube) {
                 loadScript();
             } else {
                 initialiseVideos();
